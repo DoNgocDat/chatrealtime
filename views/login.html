@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng Nhập</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <div id="login-container" style="margin-left: 50px; text-align: center; margin-top: 50px; border: inset; width: 250px; padding: 5px;">
+        <h2 style="color: #b35216;">Đăng Nhập</h2>
+        <form action="/login" method="POST">
+            <input type="text" name="username" placeholder="Tên đăng nhập" required> <br><br>
+            <input type="password" name="password" placeholder="Mật khẩu" required><br><br>
+            <button type="submit" style="color: white; background-color: #4caf50; border: none; height: 25px;">Đăng Nhập</button>
+        </form>
+        <p style="color: #b35216;">Chưa có tài khoản? <a href="/register">Đăng ký</a></p>
+    </div>
+</body>
+</html>

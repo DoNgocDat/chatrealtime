@@ -1,0 +1,143 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('../image/background.jpg');
+    background-size: cover;
+}
+
+#container {
+    margin: 0 auto;
+    max-width: 400px;
+    margin-right: 770px;
+    margin-top: 32px;
+}
+
+#content {
+    background-color: #eaedf2;
+    padding: 10px;
+    overflow-y: scroll;
+    height: 450px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2)
+}
+
+.message {
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.message.self {
+    background-color: #607c8d;
+    color: white;
+    float: right;
+    max-width: 220px;
+}
+
+.message.others {
+    background-color: #e0e0e0;
+    float: left;
+    max-width: 220px;
+}
+
+#message {
+    width: calc(100% - 118px);
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+
+#conSendMess {
+    padding: 5px;
+    background-color: #eaedf2;
+    position: relative;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2)
+}
+
+#sendMessage {
+    padding: 8px;
+    border: none;
+    background-color: #eaedf2;
+    color: #4caf50;
+    border-radius: 28px;
+    cursor: pointer;
+}
+
+#sendMessage:hover {
+    background-color: white;
+}
+
+#sendMessage i {
+    font-size: 16px;
+}
+
+legend {
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: rgb(151, 87, 9);
+}
+
+#header {
+    background-color: #607c8d;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 8px;
+    height: 32px;
+}
+
+#username {
+    margin-top: 8px;
+    margin-bottom: 8px;
+    margin-left: 8px;
+    color: #ffffff;
+    width: 170px;
+}
+
+.clear {
+    clear: both;
+}
+
+/* CSS cho bảng biểu tượng cảm xúc */
+.emoji-table {
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.emoji-table td {
+    padding: 5px;
+    text-align: center;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.emoji {
+    cursor: pointer;
+}
+
+#emojiPanel {
+    position: absolute;
+    z-index: 1;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 5px;
+    margin-top: -170px;
+    /* Điều chỉnh vị trí bảng biểu tượng cảm xúc lên trên */
+    border-radius: 5px;
+    display: none;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2)
+}
+
+#openEmojiPanel {
+    border: none;
+}
+
+#openFileInput {
+    border: none;
+}
+
+/* Khi hover vào ảnh */
+img:hover {
+    cursor: pointer; /* Biến con trỏ thành hình tay khi hover vào ảnh */
+    opacity: 0.7; /* Giảm độ trong suốt của ảnh khi hover */
+    transition: opacity 0.3s ease; /* Thêm hiệu ứng chuyển đổi mượt mà */
+}
+

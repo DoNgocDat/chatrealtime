@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat realtime Nodejs</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <div id="container">
+        <div id="header">
+            <h5 id="username" name="username"></h5>
+        </div>
+        <div id="content"></div>
+        <div id="conSendMess">
+            <!-- Thẻ input file ẩn -->
+            <input type="file" id="fileInput" style="display: none;">
+            <!-- Nút icon để mở hộp thoại chọn tệp -->
+            <button id="openFileInput">
+                <i class="fas fa-paperclip" style="color: #4caf50;"></i>
+            </button>
+            <!-- Thêm nút icon để mở bảng biểu tượng cảm xúc -->
+            <button id="openEmojiPanel">
+                <i class="far fa-smile" style="color: #4caf50;"></i>
+            </button>
+            <!-- Bảng biểu tượng cảm xúc ẩn -->
+            <div id="emojiPanel" style="display: none;">
+                <table class="emoji-table">
+                    <tr>
+                        <td class="emoji" onclick="insertEmoji('😊')">😊</td>
+                        <td class="emoji" onclick="insertEmoji('😂')">😂</td>
+                        <td class="emoji" onclick="insertEmoji('😍')">😍</td>
+                        <td class="emoji" onclick="insertEmoji('😘')">😘</td>
+                        <td class="emoji" onclick="insertEmoji('🥰')">🥰</td>
+                        <td class="emoji" onclick="insertEmoji('🤔')">🤔</td>
+                    </tr>
+                    <tr>
+                        <td class="emoji" onclick="insertEmoji('😎')">😎</td>
+                        <td class="emoji" onclick="insertEmoji('🤔')">🤔</td>
+                        <td class="emoji" onclick="insertEmoji('😢')">😢</td>
+                        <td class="emoji" onclick="insertEmoji('🤫')">🤫</td>
+                        <td class="emoji" onclick="insertEmoji('😴')">😴</td>
+                        <td class="emoji" onclick="insertEmoji('😷')">😷</td>
+                    </tr>
+                    <tr>
+                        <td class="emoji" onclick="insertEmoji('🤥')">🤥</td>
+                        <td class="emoji" onclick="insertEmoji('🥶')">🥶</td>
+                        <td class="emoji" onclick="insertEmoji('🥳')">🥳</td>
+                        <td class="emoji" onclick="insertEmoji('😏')">😏</td>
+                        <td class="emoji" onclick="insertEmoji('🤓')">🤓</td>
+                        <td class="emoji" onclick="insertEmoji('🧐')">🧐</td>
+                    </tr>
+                </table>
+            </div>
+            <!-- Kết thúc bảng biểu tượng cảm xúc -->
+            <input id="message" placeholder="Nhập tin nhắn..">
+            <button id="sendMessage">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/chat.js"></script>
+</body>
+
+</html>
